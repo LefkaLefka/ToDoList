@@ -21,7 +21,7 @@ body
 	position: relative;
 
 	margin: 0;
-    padding: 0;
+	padding: 0;
 	right: 50%;
 	left: 50%;
 	margin-right: -275px;
@@ -40,25 +40,36 @@ body
 	box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
 	
 	position: absolute;
-    margin: 0;
-    padding: 0;
+	margin: 0;
+	padding: 0;
 	right: 50%;
 	left: 50%;
 	margin-right: -275px;
 	margin-left: -275px;
 }
 
-
 .checkboxExpandTurn
 {
-	text-align: center;
-	width: 50px;
-	height: auto;
-    position: absolute;
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	left: 15px;
 	top: 0;
-    bottom: 0;
-    margin: auto 0;
-    border: none;
+	bottom: 0;
+	margin: auto 0;
+	border: none;
+	vertical-align: middle;
+	box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+	-webkit-appearance: none;
+    -webkit-transition: box-shadow 200ms;
+	border-radius: 50%;
+	-webkit-border-radius: 500px;
+	outline: none;
+}
+
+.checkboxExpandTurn:checked
+{
+/*	background-color: red;*/
 }
 
 .data
@@ -68,7 +79,7 @@ body
 	
 	position: relative;
 	margin: 0;
-    padding: 0;
+	padding: 0;
 	right: 50%;
 	left: 50%;
 	margin-right: -275px;
@@ -102,14 +113,27 @@ body
 
 .checkboxDone
 {
-	text-align: center;
-	width: 50px;
-	height: auto;
-    position: absolute;
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	left: 15px;
 	top: 0;
-    bottom: 0;
-    margin: auto 0;
-    border: none;
+	bottom: 0;
+	margin: auto 0;
+	border: none;
+	vertical-align: middle;
+	box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+	-webkit-appearance: none;
+    -webkit-transition: box-shadow 200ms;
+	border-radius: 50%;
+	-webkit-border-radius: 500px;
+	outline: none;
+	cursor: pointer;
+}
+
+.checkboxDone:checked
+{
+	background-color: #BCEE68;
 }
 
 .text
@@ -123,13 +147,13 @@ body
 
 .buttonDelete
 {
-    position: absolute;
-    top: 0;
-    right: 10px;
-    bottom: 0;
-    width: 30px;
-    height: 30px;
-    margin: auto 0;
+	position: absolute;
+	top: 0;
+	right: 10px;
+	bottom: 0;
+	width: 30px;
+	height: 30px;
+	margin: auto 0;
 	text-align: center;
 	vertical-align: middle;
 	padding-bottom: 11px;
@@ -150,13 +174,18 @@ body
 	text-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
 }
 
+.buttonDelete:active .buttonDeleteText
+{
+	text-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
+}
+
 .footer
 {
 	width: 550px;
 	height: 25px;
 	position: relative;
 	margin: 0;
-    padding: 0;
+	padding: 0;
 	right: 50%;
 	left: 50%;
 	margin-right: -275px;
@@ -169,18 +198,18 @@ body
 .toDoLeft
 {
 	float: left;
-    text-align: left;
+	text-align: left;
 	margin-left: 2px;
 }
 
 .filters
 {
 	margin: 0;
-    padding: 0;
-    list-style: none;
-    position: absolute;
-    right: 0;
-    left: 0;
+	padding: 0;
+	list-style: none;
+	position: absolute;
+	right: 0;
+	left: 0;
 }
 
 ul.filters li
@@ -205,7 +234,7 @@ ul.filters li input
 .clearComplete
 {
 	float: right;
-    position: relative;
+	position: relative;
 	border: none;
 	color: inherit;
 	line-height: 20px;
