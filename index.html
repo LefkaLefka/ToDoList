@@ -22,14 +22,18 @@
 					<div class="text">
 						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt distinctio laboriosam itaque architecto? Voluptatibus c
 					</div>
-					<input class="buttonDelete" type="button">
+					<div class="buttonDelete" onselectstart="return false" onmousedown="return false">
+						<span class="buttonDeleteText">X</span>
+					</div>
 				</li>
 				<li class="record">
 					<input class="checkboxDone" type="checkbox">
 					<div class="text">
 						Lorem ipsum dolor sit amet, llendus, maiores consequatur accusamus consectetur dolore sit, impedit natus, est inventore nobis.
 					</div>
-					<input class="buttonDelete" type="button">
+					<div class="buttonDelete" onselectstart="return false" onmousedown="return false">
+						<span class="buttonDeleteText">X</span>
+					</div>
 				</li>
 			</ul>
 		</div>
@@ -39,7 +43,7 @@
 			<ul class="filters">
 				<li><input type="button" value="All" id="showAll"></li>
 				<li><input type="button" value="Active" id="showActive"></li>
-				<li><input type="button" value="Completed" id="sowComleted"></li>
+				<li><input type="button" value="Completed" id="showComleted"></li>
 			</ul>
 			<input class="clearComplete" type="button" value="Clear complete" id="clearCompleted">
 		</div>
