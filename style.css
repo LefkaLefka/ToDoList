@@ -48,7 +48,7 @@ body
 	margin-left: -275px;
 }
 
-.checkboxExpandTurn
+input[type="checkbox"]
 {
 	width: 20px;
 	height: 20px;
@@ -67,16 +67,20 @@ body
 	outline: none;
 }
 
+input[type="checkbox"]:hover
+{
+	box-shadow: 0 0 2px rgba(0, 0, 0, 1);
+}
+
 .checkboxExpandTurn:checked
 {
-/*	background-color: red;*/
+	background-color: #9ACD32;/**/
 }
 
 .data
 {
 	width: 550px;
 	height: auto;
-	
 	position: relative;
 	margin: 0;
 	padding: 0;
@@ -109,26 +113,6 @@ body
 	font-size: 26px;
 	background-color: rgb(255, 255, 214);
 	box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
-}
-
-.checkboxDone
-{
-	width: 20px;
-	height: 20px;
-	position: absolute;
-	left: 15px;
-	top: 0;
-	bottom: 0;
-	margin: auto 0;
-	border: none;
-	vertical-align: middle;
-	box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
-	-webkit-appearance: none;
-    -webkit-transition: box-shadow 200ms;
-	border-radius: 50%;
-	-webkit-border-radius: 500px;
-	outline: none;
-	cursor: pointer;
 }
 
 .checkboxDone:checked
