@@ -118,6 +118,7 @@ body
 	height: auto;
 	position: relative;
 	left: 50px;
+	background-color: rgb(255, 255, 214);
 }
 
 .buttonDelete
@@ -129,14 +130,30 @@ body
     width: 30px;
     height: 30px;
     margin: auto 0;
-    font-size: 30px;
+	text-align: center;
+	vertical-align: middle;
+	padding-bottom: 11px;
+	background-color: rgb(255, 255, 214);
+	outline: none;
+	cursor: pointer;
+}
+
+.buttonDelete .buttonDeleteText
+{
+	font-size: 30px;
+	color: #E6E6FA;
+}
+
+.buttonDelete:hover .buttonDeleteText
+{
+	color: #FFE4B5;
+	text-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
 }
 
 .footer
 {
 	width: 550px;
 	height: 25px;
-	
 	position: relative;
 	margin: 0;
     padding: 0;
@@ -144,10 +161,8 @@ body
 	left: 50%;
 	margin-right: -275px;
 	margin-left: -275px;
-	
 	background-color: rgb(255, 255, 214);
 	box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
-	
 	text-align: center;
 }
 
