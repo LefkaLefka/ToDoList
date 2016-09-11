@@ -11,33 +11,13 @@
 		<h1 class="headerName">ToDoList</h1>
 		
 		<div class="header">
-			<input class="newRecord" placeholder="What needs to be done?" value="">
-			<input class="checkboxExpandTurn" type="checkbox">
+			<input class="newRecord" id="inputFormNewRecord" placeholder="What needs to be done?">
+			<input class="checkboxExpandTurn" type="checkbox" id="checkboxExpandTurnRecords">
 		</div>
 
 		<div class="data">
-			<ul class="dataList">
-				<li class="record">
-					<input class="checkboxDone" type="checkbox">
-					<div class="text">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt distinctio laboriosam itaque architecto? Voluptatibus c
-					</div>
-					<div class="buttonDelete" onselectstart="return false" onmousedown="return false">
-						<span class="buttonDeleteText">X</span>
-					</div>
-				</li>
-				<li class="record">
-					<input class="checkboxDone" type="checkbox">
-					<div class="text">
-						Lorem ipsum doloronsectetur dolore sit, impedit natus, est inventore nobis.
-					</div>
-					<div class="buttonDelete" onselectstart="return false" onmousedown="return false">
-						<span class="buttonDeleteText">X</span>
-					</div>
-				</li>
-			</ul>
+			<ul class="dataList" id="listElement"></ul>
 		</div>
-
 		<div class="footer">
 			<span class="toDoLeft">1 toDo left</span>
 			<ul class="filters">
