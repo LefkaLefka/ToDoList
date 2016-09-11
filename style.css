@@ -19,13 +19,13 @@ body
 	width: 550px;
 	height: 50px;
 	position: relative;
-
 	margin: 0;
 	padding: 0;
 	right: 50%;
 	left: 50%;
 	margin-right: -275px;
 	margin-left: -275px;
+	outline: none;
 }
 
 .newRecord
@@ -38,7 +38,6 @@ body
 	text-indent: 50px;
 	background-color: rgb(255, 255, 214);
 	box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
-	
 	position: absolute;
 	margin: 0;
 	padding: 0;
@@ -46,9 +45,10 @@ body
 	left: 50%;
 	margin-right: -275px;
 	margin-left: -275px;
+	outline: none;
 }
 
-input[type="checkbox"]
+.checkboxExpandTurn
 {
 	width: 20px;
 	height: 20px;
@@ -67,7 +67,7 @@ input[type="checkbox"]
 	outline: none;
 }
 
-input[type="checkbox"]:hover
+.checkboxExpandTurn:hover
 {
 	box-shadow: 0 0 2px rgba(0, 0, 0, 1);
 }
@@ -115,9 +115,29 @@ input[type="checkbox"]:hover
 	box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
 }
 
+.checkboxDone
+{
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	left: 15px;
+	top: 0;
+	bottom: 0;
+	margin: auto 0;
+	border: none;
+	vertical-align: middle;
+	box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+	-webkit-appearance: none;
+    -webkit-transition: box-shadow 200ms;
+	border-radius: 50%;
+	-webkit-border-radius: 500px;
+	outline: none;
+}
+
 .checkboxDone:checked
 {
 	background-color: #BCEE68;
+	box-shadow: 0 0 2px rgba(0, 0, 0, 1);
 }
 
 .text
