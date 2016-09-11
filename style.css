@@ -1,0 +1,225 @@
+body
+{
+	background-color: #FFFFE0;
+	font-family: SEGOE SCRIPT, MV BOLI;
+}
+
+.headerName
+{
+	margin-top: 3%;
+	font-weight: bolder;
+	font-size: 100px;
+	color: #EEE8AA;
+	text-shadow: 2px 2px 10px #CDAD00;
+	text-align: center;
+}
+
+.header
+{
+	width: 550px;
+	height: 50px;
+	position: relative;
+
+	margin: 0;
+    padding: 0;
+	right: 50%;
+	left: 50%;
+	margin-right: -275px;
+	margin-left: -275px;
+}
+
+.newRecord
+{
+	width: 550px;
+	height: 48px;
+	border: none;
+	font-family: inherit;
+	font-size: 26px;
+	text-indent: 50px;
+	background-color: rgb(255, 255, 214);
+	box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+	
+	position: absolute;
+    margin: 0;
+    padding: 0;
+	right: 50%;
+	left: 50%;
+	margin-right: -275px;
+	margin-left: -275px;
+}
+
+
+.checkboxExpandTurn
+{
+	text-align: center;
+	width: 50px;
+	height: auto;
+    position: absolute;
+	top: 0;
+    bottom: 0;
+    margin: auto 0;
+    border: none;
+}
+
+.data
+{
+	width: 550px;
+	height: auto;
+	
+	position: relative;
+	margin: 0;
+    padding: 0;
+	right: 50%;
+	left: 50%;
+	margin-right: -275px;
+	margin-left: -275px;
+}
+
+.dataList
+{
+	margin-left: 0;
+	padding-left: 0;
+	list-style: none;
+}
+
+.record
+{
+	width: 548px;
+	height: auto;
+	position: relative;
+	right: 50%;
+	left: 50%;
+	margin-right: -275px;
+	margin-left: -275px;
+	width: 550px;
+	height: auto;
+	border: none;
+	font-family: inherit;
+	font-size: 26px;
+	background-color: rgb(255, 255, 214);
+	box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+}
+
+.checkboxDone
+{
+	text-align: center;
+	width: 50px;
+	height: auto;
+    position: absolute;
+	top: 0;
+    bottom: 0;
+    margin: auto 0;
+    border: none;
+}
+
+.text
+{
+	width: 460px;
+	height: auto;
+	position: relative;
+	left: 50px;
+}
+
+.buttonDelete
+{
+    position: absolute;
+    top: 0;
+    right: 10px;
+    bottom: 0;
+    width: 30px;
+    height: 30px;
+    margin: auto 0;
+    font-size: 30px;
+}
+
+.footer
+{
+	width: 550px;
+	height: 25px;
+	
+	position: relative;
+	margin: 0;
+    padding: 0;
+	right: 50%;
+	left: 50%;
+	margin-right: -275px;
+	margin-left: -275px;
+	
+	background-color: rgb(255, 255, 214);
+	box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+	
+	text-align: center;
+}
+
+.toDoLeft
+{
+	float: left;
+    text-align: left;
+	margin-left: 2px;
+}
+
+.filters
+{
+	margin: 0;
+    padding: 0;
+    list-style: none;
+    position: absolute;
+    right: 0;
+    left: 0;
+}
+
+ul.filters li
+{
+	display: inline;
+}
+
+ul.filters li input
+{
+	border: none;
+	color: inherit;
+	line-height: 20px;
+	margin: 2px;
+	cursor: pointer;
+	background: none;
+	font-family: inherit;
+	font-size: 100%;
+	text-decoration: none;
+	outline: none;
+}
+
+.clearComplete
+{
+	float: right;
+    position: relative;
+	border: none;
+	color: inherit;
+	line-height: 20px;
+	margin: 2px;
+	cursor: pointer;
+	background: none;
+	font-family: inherit;
+	font-size: 100%;
+	outline: none;
+}
+
+.footerInfo
+{
+	margin: 3%;	
+	font-weight: bolder;
+	font-size: 15px;
+	color: #CDBE70;
+	text-shadow: 0 0 2px rgba(205, 173, 0, 0.2);
+	text-align: center;
+}
+
+h1.footerInfo a
+{
+	text-decoration: none;
+	color: #CDBE70;
+}
+
+h1.footerInfo a:hover
+{
+	text-decoration: underline;
+	color: #CDBE70;
+}
