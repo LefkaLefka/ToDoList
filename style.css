@@ -140,6 +140,12 @@ body
 	box-shadow: 0 0 2px rgba(0, 0, 0, 1);
 }
 
+.checkboxDone:checked+.text
+{
+	text-decoration: line-through;
+	color: #A7A7A7;
+}
+
 .text
 {
 	width: 460px;
