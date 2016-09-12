@@ -172,19 +172,19 @@ body
 	cursor: pointer;
 }
 
-.buttonDelete .buttonDeleteText
+.buttonDelete .buttonDeleteRecord
 {
 	font-size: 30px;
 	color: #E6E6FA;
 }
 
-.buttonDelete:hover .buttonDeleteText
+.buttonDelete:hover .buttonDeleteRecord
 {
 	color: #FFE4B5;
 	text-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
 }
 
-.buttonDelete:active .buttonDeleteText
+.buttonDelete:active .buttonDeleteRecord
 {
 	text-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
 }
