@@ -51,36 +51,38 @@ body
 .checkboxExpandTurn
 {
 	width: 20px;
-	height: 20px;
+	height: 10px;
 	position: absolute;
 	left: 15px;
 	top: 0;
 	bottom: 0;
 	margin: auto 0;
-	border: none;
 	vertical-align: middle;
-	box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
 	-webkit-appearance: none;
-    -webkit-transition: box-shadow 200ms;
-	border-radius: 50%;
-	-webkit-border-radius: 500px;
 	outline: none;
-}
-
-.checkboxExpandTurn:hover
-{
-	box-shadow: 0 0 2px rgba(0, 0, 0, 1);
+	cursor: pointer;
+/*	box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);*/
+/*	border-radius: 50%;*/
+	
+	border-top: 0px;
+	border-bottom: 8px solid #E6E6FA;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;	
 }
 
 .checkboxExpandTurn:checked
 {
-	background-color: #9ACD32;/**/
+	border-bottom: 0px;
+	border-top: 8px solid #BCEE68;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
 }
 
 .data
 {
 	width: 550px;
 	height: auto;
+/*	min-height: 20px;*/
 	position: relative;
 	margin: 0;
 	padding: 0;
@@ -97,7 +99,7 @@ body
 	list-style: none;
 }
 
-.record
+.task
 {
 	width: 548px;
 	height: auto;
