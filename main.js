@@ -2,12 +2,79 @@
 // состоит из объктов вида
 // task = {statusTask: false, textTask: ""}
 var arrayTasks = new Array();
+// логическая перемення отображает свернуты/развернуты задачи
+var areShowTasks = true;
+// что мы отображаем
+// по умолчанию "all", так же возможно: "active", "completed"
+var whatShow = "all";
 
 // назначаем функций обработчика событий
 window.onload = function()
 {
+	// нажатие на кнопку Enter - добаление новой записи
 	document.getElementById("inputFormNewTask").addEventListener("keypress", AddNewTaskToArray);
-//	document.getElementById("checkboxExpandTurnTasks").addEventListener("click", ExpandTurnRecords);
+	// клик на кнопку удаление всех заверншенных задач
+	document.getElementById("clearCompleted").addEventListener("click", ClearCompleted);
+	// клик на чекбокс свернуть/развернуть список
+	document.getElementById("checkboxExpandTurnTasks").addEventListener("click", ExpandturnTasks);
+	
+	// клик по фильтру
+	document.getElementById("showAll").addEventListener("click", ShowAll);
+	document.getElementById("showActive").addEventListener("click", ShowActive);
+	document.getElementById("showComleted").addEventListener("click", ShowCompleted);
+}
+
+// отображение всех задач
+function ShowAll()
+{
+	var element;
+	for (i = 0; i < arrayTasks.length; ++i)
+	{
+		element = document.getElementById(i.toString());
+		element.style.display = "block";
+	}
+}
+
+// отображаение активных(незавершенных) задач
+function ShowActive()
+{
+	var element;
+	for (i = 0; i < arrayTasks.length; ++i)
+	{
+		element = document.getElementById(i.toString());
+		// если задача незавершена
+		if (!arrayTasks[i].statusTask)
+		{
+			// отображаем ее
+			element.style.display = "block";
+		}
+		else
+		{
+			// если задача завершана
+			element.style.display = "none";
+		}
+	}
+}
+
+// отображение завершенных задач
+function ShowCompleted()
+{
+	var element;
+	for (i = 0; i < arrayTasks.length; ++i)
+	{
+		element = document.getElementById(i.toString());
+		// если задача завершена
+		if (arrayTasks[i].statusTask)
+		{
+			// отображаем ее
+			element.style.display = "block";
+		}
+		else
+		{
+			// если задача завершана
+			element.style.display = "none";
+		}
+	}
 }
 
 // добавляем новую задачу в массив задач
@@ -38,7 +105,7 @@ function AddNewTaskToArray()
 function ModelingPasteStrLiElement(num)
 {
 	var newList = document.createElement("li");
-	newList.className = "record";
+	newList.className = "task";
 	newList.id = num;
 	listElement.appendChild(newList);
 	
@@ -98,10 +165,34 @@ document.onclick = function(e)
 		// обновляем запись о количестве оставшихся задач
 		UpdateNumberUnfinishedTasks();
 	}
-	if (target.id === "clearCompleted")
+}
+
+// сворачивание/разворачивание задач
+function ExpandturnTasks()
+{
+	if (arrayTasks.length > 0)
 	{
-		ClearCompleted();
-	}	
+		if (areShowTasks)
+		{
+			document.getElementById("listElement").style.display = "none";
+	//		var elements = document.getElementsByClassName("task");
+	//		for (i = 0; i < elements.length; ++i)
+	//		{
+	//			elements[i].style.display = "none";
+	//		}
+				areShowTasks ^= true;
+		}
+		else
+		{
+			document.getElementById("listElement").style.display = "block";
+	//		var elements = document.getElementsByClassName("task");
+	//		for (i = 0; i < elements.length; ++i)
+	//		{
+	//			elements[i].style.display = "block";
+	//		}
+			areShowTasks ^= true;
+		}
+	}
 }
 
 // удаление записи
