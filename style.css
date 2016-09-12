@@ -28,7 +28,7 @@ body
 	outline: none;
 }
 
-.newRecord
+.newTask
 {
 	width: 550px;
 	height: 48px;
@@ -172,19 +172,19 @@ body
 	cursor: pointer;
 }
 
-.buttonDelete .buttonDeleteRecord
+.buttonDelete .buttonDeleteTask
 {
 	font-size: 30px;
 	color: #E6E6FA;
 }
 
-.buttonDelete:hover .buttonDeleteRecord
+.buttonDelete:hover .buttonDeleteTask
 {
 	color: #FFE4B5;
 	text-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
 }
 
-.buttonDelete:active .buttonDeleteRecord
+.buttonDelete:active .buttonDeleteTask
 {
 	text-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
 }
