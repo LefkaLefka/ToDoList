@@ -11,15 +11,15 @@
 		<h1 class="headerName">ToDoList</h1>
 		
 		<div class="header">
-			<input class="newRecord" id="inputFormNewRecord" placeholder="What needs to be done?">
-			<input class="checkboxExpandTurn" type="checkbox" id="checkboxExpandTurnRecords">
+			<input class="newTask" id="inputFormNewTask" placeholder="What needs to be done?">
+			<input class="checkboxExpandTurn" type="checkbox" id="checkboxExpandTurnTasks">
 		</div>
 
 		<div class="data">
 			<ul class="dataList" id="listElement"></ul>
 		</div>
 		<div class="footer">
-			<span class="toDoLeft">1 toDo left</span>
+			<span class="toDoLeft" id="unfinishedTasks">0 toDo left</span>
 			<ul class="filters">
 				<li><input type="button" value="All" id="showAll"></li>
 				<li><input type="button" value="Active" id="showActive"></li>
