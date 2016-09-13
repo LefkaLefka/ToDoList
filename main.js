@@ -33,6 +33,7 @@ function ShowAll()
 		element = document.getElementById(i.toString());
 		element.style.display = "block";
 	}
+	ExpandTaskFromFilters();
 }
 
 // отображаение активных(незавершенных) задач
@@ -54,6 +55,7 @@ function ShowActive()
 			element.style.display = "none";
 		}
 	}
+	ExpandTaskFromFilters();
 }
 
 // отображение завершенных задач
@@ -75,6 +77,15 @@ function ShowCompleted()
 			element.style.display = "none";
 		}
 	}
+	ExpandTaskFromFilters();
+}
+
+function ExpandTaskFromFilters()
+{
+	// отображаем элемент ul
+	document.getElementById("listElement").style.display = "block";
+	document.getElementById("checkboxExpandTurnTasks").checked = false;
+	areShowTasks = true;
 }
 
 // добавляем новую задачу в массив задач
@@ -170,29 +181,28 @@ document.onclick = function(e)
 // сворачивание/разворачивание задач
 function ExpandturnTasks()
 {
+	// если есть че сворачивать
 	if (arrayTasks.length > 0)
 	{
+		// если элементы отображены
 		if (areShowTasks)
 		{
+			// скрываем элементы ul
 			document.getElementById("listElement").style.display = "none";
-	//		var elements = document.getElementsByClassName("task");
-	//		for (i = 0; i < elements.length; ++i)
-	//		{
-	//			elements[i].style.display = "none";
-	//		}
-				areShowTasks ^= true;
+			areShowTasks ^= true;
 		}
 		else
 		{
+			// отображаем элементы ul
 			document.getElementById("listElement").style.display = "block";
-	//		var elements = document.getElementsByClassName("task");
-	//		for (i = 0; i < elements.length; ++i)
-	//		{
-	//			elements[i].style.display = "block";
-	//		}
 			areShowTasks ^= true;
 		}
 	}
+	else
+	{
+		document.getElementById("checkboxExpandTurnTasks").checked = false;
+	}
+		
 }
 
 // удаление записи
