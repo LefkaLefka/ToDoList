@@ -241,6 +241,16 @@ ul.filters li input
 	outline: none;
 }
 
+ul.filters li input:hover
+{
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+ul.filters li input:active
+{
+	text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
 .clearComplete
 {
 	float: right;
@@ -254,6 +264,16 @@ ul.filters li input
 	font-family: inherit;
 	font-size: 100%;
 	outline: none;
+}
+
+.clearComplete:hover
+{
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.clearComplete:active
+{
+	text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
 }
 
 .footerInfo
@@ -275,5 +295,4 @@ h1.footerInfo a
 h1.footerInfo a:hover
 {
 	text-decoration: underline;
-	color: #CDBE70;
 }
