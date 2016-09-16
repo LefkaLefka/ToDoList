@@ -7,6 +7,12 @@ var areShowTasks = true;
 // что мы отображаем
 // по умолчанию "all", так же возможно: "active", "completed"
 var whatShow = "all";
+// переменная для просмотра элемента
+// на который установлен фокус
+var focusId;
+// функция редактирования записи
+// false - выключена; true - включена
+var editMode = false;
 
 // назначаем функций обработчика событий
 window.onload = function()
@@ -144,6 +150,27 @@ function ModelingStrButtonDeleteDivSpan(num)
 	return str;
 }
 
+// двойной клик по элементу
+// для редактирования записи
+document.ondblclick = function(e)
+{
+	e = e || event;
+	var target = e.target || e.srcElement;
+	// елс инажали на запись
+	if (target.className === "text")
+	{
+		// id элемента на который нажали
+		var id = target.id.replace(/.1/, "");
+		var idInt = parseInt(id);
+		// input для редактирования
+		document.getElementById(id + ".1").innerHTML = "<input class=\"taskEdit\" type=\"text\" id=\"" + id + ".1.0\"" + "value=\"" + arrayTasks[idInt].textTask + "\">";
+		// где фокус редектирования:
+		focusId = id + ".1.0"
+		// устанавливаем режим редактирования
+		editMode ^= true;
+	}
+}
+
 // все события клика
 document.onclick = function(e)
 {
@@ -176,6 +203,32 @@ document.onclick = function(e)
 		// обновляем запись о количестве оставшихся задач
 		UpdateNumberUnfinishedTasks();
 	}
+	if (editMode)
+	{
+		if (document.activeElement.id !== focusId)
+		{
+			SaveEditTask();
+		}
+	}
+}
+
+// после протери фокуса на элементе редактирования
+// сохраняем изменения в общем массиве
+function SaveEditTask()
+{
+	// получаем измененное значение
+	var str = document.getElementById(focusId).value;
+	// изменяем id для того чтобы найти div куда записываем текст	
+	var newId = focusId.replace(/.0/, "");
+	// записываем текст этим самым удаляя input
+	document.getElementById(newId).innerHTML = str;
+	// изменяем id чтобы сохранить изменения в массиве
+	newId = newId.replace(/.1/, "");
+	var idInt = parseInt(newId);
+	// срхраняем изменения в массиве
+	arrayTasks[idInt].textTask = str;	
+	focusId = "";
+	editMode ^= true;
 }
 
 // сворачивание/разворачивание задач
