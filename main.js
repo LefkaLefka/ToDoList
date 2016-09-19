@@ -276,7 +276,7 @@ function DeleteTaskFromArray(index)
 		arrayTasks[i].textTask = arrayTasks[i + 1].textTask;
 	}
 	// удаляем последний элемент
-	arrayTasks.splice(arrayTasks.length - 1, 1);
+	arrayTasks.pop();
 }
 
 // обновление списка всех задач на экране
